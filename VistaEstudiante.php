@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 <body>
     <p>
@@ -12,7 +14,7 @@
     </p>
     <form action="EstudianteController.php" method="post">
         <p>
-            <label for="apellidos">Apellidos</label> apellidos
+            <label for="apellidos">Apellidos</label>
             <input type="text" name="apellidos">
         </p>
         
@@ -32,13 +34,15 @@
         </p>
         
         <p>
-            <input type="submit" value="Guardar Registro">
+             <input type="submit" value="Guardar Registro"class="btn btn-primary"> </button>
         </p>
+    
     </form>
     <hr>
-    <h3>LISTADO DE ESTUDIANTES</h3>
+    <div class="p-3 mb-2 bg-secondary text-white"> <h2 class="fw-bold"><center>LISTADO DE ESTUDIANTES</h2></center></div>
     <hr>
-    <table border="1">
+
+    <table class="table table-striped">
         <th>NOMBRE</th>
         <th>APELLIDOS</th>
         <th>DIRECCION</th>
@@ -50,14 +54,19 @@
         $ListaEstudiantes = $Estudiante->ListarEstudiantes();
         while($Estudiantes = mysqli_fetch_assoc($ListaEstudiantes))
         {?>
+          
           <tr>
+        
+
                 <td>  <?php echo $Estudiantes['nombre'] ?> </td>
                 <td>  <?php echo $Estudiantes['apellidos'] ?> </td>
                 <td>  <?php echo $Estudiantes['direccion'] ?> </td>
                 <td>  <?php echo $Estudiantes['telefono'] ?> </td>
-                <td>Editar prueba05Oct2022</td>
-                <td>Eliminar</td>
-          </tr>
+                <td><button type="button" class="btn btn-success">Editar</button></td>
+                <td><button type="button" class="btn btn-danger">Eliminar</button></td>
+                
+            </tr>
+        
           
        <?php } ?>
     
