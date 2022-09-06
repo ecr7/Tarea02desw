@@ -8,39 +8,46 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
+
+
 <body>
     <p>
-        <h2>INGRESO DE DATOS DEL ESTUDIANTE</h2>
+        <h2><span class="d-block p-2 text-bg-primary"><center>INGRESO DE DATOS DEL ESTUDIANTE</snap></center></h2>
     </p>
     <form action="EstudianteController.php" method="post">
-        <p>
-            <label for="apellidos">Apellidos</label>
-            <input type="text" name="apellidos">
-        </p>
-        
-        <p>
-            <label for="nombre">Nombre</label>
-        <input type="text" name="nombre">
-        </p>
-        
-        <p>
-            <label for="direccion">direccion</label>
-            <input type="text" name="direccion">
-        </p>
-        
-        <p>
-            <label for="telefono">Telefono</label>
-            <input type="number" name="telefono">
-        </p>
-        
-        <p>
-             <input type="submit" value="Guardar Registro"class="btn btn-primary"> </button>
-        </p>
-    
+       
+        <div class="container">
+                <p>
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" name="apellidos">
+                </p>
+                
+                <p>
+                    <label for="nombre">Nombre</label>
+                <input type="text" name="nombre">
+                </p>
+
+                <p>
+                    <label for="direccion">Direccion</label>
+                    <input type="text" name="direccion">
+                </p>
+                
+                <p>
+                    <label for="telefono">Telefono</label>
+                    <input type="number" name="telefono">
+                </p>
+                
+                <p>
+                    <input type="submit" value="Guardar Registro"class="btn btn-primary"> </button>
+                </p>
+        </div>
     </form>
     <hr>
-    <div class="p-3 mb-2 bg-secondary text-white"> <h2 class="fw-bold"><center>LISTADO DE ESTUDIANTES</h2></center></div>
+    <div class="p-3 mb-2 bg-secondary text-white"> <h3 class="fw-bold"><center>LISTADO DE ESTUDIANTES</h3></center></div>
     <hr>
+
+
+
 
     <table class="table table-striped">
         <th>NOMBRE</th>
@@ -71,5 +78,7 @@
        <?php } ?>
     
     </table>
+
+
 </body>
 </html>
