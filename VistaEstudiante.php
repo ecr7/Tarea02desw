@@ -69,7 +69,7 @@
                 <td>  <?php echo $Estudiantes['apellidos'] ?> </td>
                 <td>  <?php echo $Estudiantes['direccion'] ?> </td>
                 <td>  <?php echo $Estudiantes['telefono'] ?> </td>
-                <td><button type="button" class="btn btn-success">Editar</button></td>
+                <td><a href="VistaEditarEstudiante.php?idEst=">Editar</a></td>
                 <td><button type="button" class="btn btn-danger">Eliminar</button></td>
                 
             </tr>
