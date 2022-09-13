@@ -15,8 +15,9 @@
 <div class="container-fluid">
 <div class='mb-3'>
     <hr>
-    <p>
+    
     <div class="text-bg-primary p-3"><center><h2>INGRESO DE DATOS DEL ESTUDIANTE</center></h2> </div>
+    <p>
     </p>
     </hr>
         <form action="EstudianteController.php" method="post">

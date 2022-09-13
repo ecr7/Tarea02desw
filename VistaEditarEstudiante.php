@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <title>VistaEditarEstudiante</title>
 </head>
 <body>
+
+<div class="text-bg-primary p-3"><center><h2>EDITAR DATOS DE ESTUDIANTE</center></h2> </div>
+
+<p>
     <form action="EstudianteController.php" method="POST">
                         <?php
                             include_once "EstudianteModel.php";
@@ -22,7 +27,7 @@
                                 <input type="text" name="txtapellidos" 
                                 value="<?php echo $resultadoFiltrado['apellidos']?>">
                                 </p>
-
+                        
                                 <p>
                                 <label for="txtnombre">Nombre:</label>
                                 <input type="text" name="txtnombre" 
@@ -48,8 +53,9 @@
                             <?php
                             }
                             ?>
-                        
-                <input type="submit" value="Editar Estudiante" name="btnEditar">            
+                   <input class="btn btn-warning" type="submit" value="Editar Estudiante" name="btnEditar">       
     </form>
+    </p>
+                        
 </body>
 </html>
